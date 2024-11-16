@@ -33,4 +33,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}  # Token used for authentication
-          publish_dir: ./build  # The build directory to deploy
+          publish_dir: ./dist  # The build directory to deploy
