@@ -4,11 +4,17 @@
   position: relative;
   background-color: rgba(12, 12, 12, 0.6);
   border-radius: 15px;
-  padding: 73px;
+  padding: 73px 10%; /* Replace margin with padding */
   margin-top: 129px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  max-width: 100%; /* Ensure container doesn't exceed viewport width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-x: hidden; /* Prevent any horizontal scrolling */
+   /* Ensure background covers full height */
+   background-image: url('your-background-image-url-here'); /* Replace with actual background image path */
+   background-size: cover; /* Ensures the image covers the entire container */
+   background-position: center; /* Centers the image */
+   background-repeat: no-repeat; /* Prevents repeating */
+   min-height: 100vh; /* Ensures the container covers at least the full viewport height */
 }
 
 .title {
@@ -21,12 +27,16 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
   flex-direction: row;
   align-items: center;
+  gap: 20px; /* Add spacing between items */
 }
 
 .aboutImage {
   width: 35%;
+  flex-shrink: 0; /* Prevent image from shrinking */
+  max-width: 100%; /* Ensure image does not overflow container */
 }
 
 .aboutItems {
@@ -34,6 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  flex: 1; /* Allow items to take up remaining space */
 }
 
 .aboutItem {
@@ -51,6 +62,8 @@
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
+  width: 100%; /* Ensure items don't exceed container width */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .aboutItem:hover {
@@ -69,16 +82,16 @@
 @media screen and (max-width: 830px) {
   .container {
     background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 0 auto; /* Center container */
   }
 
   .content {
-    flex-direction: column;
+    flex-direction: column; /* Stack content vertically */
   }
 
   .aboutImage {
-    display: none;
+    display: none; /* Hide the image on smaller screens */
   }
 
   .aboutItems {
@@ -86,7 +99,12 @@
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 20px; /* Adjust padding for smaller screens */
   }
+}
+
+html, body {
+  margin: 0; /* Remove default browser margin */
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling globally */
 }
