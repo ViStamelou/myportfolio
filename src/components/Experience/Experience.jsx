@@ -1,9 +1,19 @@
+import React, { useState } from "react";
 import styles from "./Experience.module.css";
-import skills from "../../data/skills.json";
+import initialSkills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
 
 export const Experience = () => {
+  // Load initial skills from JSON into state
+  const [skills, setSkills] = useState(initialSkills);
+
+  // // Function to add a new skill
+  const addSkill = () => {
+    const newSkill = { title: "Angular", imageSrc: "skills/angular.png" };
+    setSkills([...skills, newSkill]); // Add new skill to the state
+  };
+
   return (
     <section className={styles.container} id="experience">
       <h2 className={styles.title}>Experience</h2>
@@ -20,6 +30,7 @@ export const Experience = () => {
             );
           })}
         </div>
+     
         <ul className={styles.history}>
           {history.map((historyItem, id) => {
             return (
