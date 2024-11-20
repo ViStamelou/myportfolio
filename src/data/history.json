@@ -3,7 +3,7 @@
       "role": "Front-end Developer",
       "organisation": "EPiC Studios",
       "startDate": "Currently",
-      "experiences": ["Worked on single page Angular project"],
+      "experiences": ["Developed a single-page web app for managing employee timesheets using HTML, CSS, and Angular 18. Designed a responsive UI and integrated dynamic data handling to improve efficiency in timesheet submission and approval."],
       "imageSrc": "history/company_logo.png"
     }
   ]
