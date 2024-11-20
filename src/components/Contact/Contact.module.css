@@ -13,13 +13,13 @@
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: 55px; 
   font-weight: 700;
   letter-spacing: 4px;
 }
 
 .text p {
-  font-size: 40px;
+  font-size: 28px; 
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -41,9 +41,14 @@
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 18px; 
   font-weight: 400;
   letter-spacing: 1.5px;
+}
+
+.link img {
+  width: 28px;  
+  height: 28px; 
 }
 
 @media screen and (max-width: 830px) {
@@ -59,6 +64,17 @@
   }
 
   .links {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    list-style: none;
+    gap: 26px;
+  }
+
+  /* Optional: Adjust image size for small screens */
+  .link img {
+    width: 20px;  
+    height: 20px; 
   }
 }
+
