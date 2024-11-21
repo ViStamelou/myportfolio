@@ -22,6 +22,15 @@
   {
     "title": "Angular",
     "imageSrc": "skills/angular.png"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "skills/javascript.png"
+  },
+  {
+    "title": "TypeScript",
+    "imageSrc": "skills/typescript.png"
   }
+
 ]
 

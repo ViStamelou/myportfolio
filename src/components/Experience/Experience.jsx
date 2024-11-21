@@ -10,7 +10,7 @@ export const Experience = () => {
 
   // // Function to add a new skill
   const addSkill = () => {
-    const newSkill = { title: "Angular", imageSrc: "skills/angular.png" };
+    const newSkill = { title: "JavaScript", imageSrc: "skills/javascript.png"};
     setSkills([...skills, newSkill]); // Add new skill to the state
   };
 
@@ -40,8 +40,8 @@ export const Experience = () => {
                   alt={`${historyItem.organisation} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate}`}</p>
+                  <h3>{`${historyItem.role}`}</h3>
+                  <p>{`${historyItem.organisation}`}</p>
                   <ul>
                     {historyItem.experiences.map((experience, id) => {
                       return <li key={id}>{experience}</li>;
